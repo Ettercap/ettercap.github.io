@@ -5,16 +5,31 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=100" />
 <!-- Force IE8 Compatibility mode OFF -->
-<link rel="stylesheet" href="./style.css" type="text/css" />
-<link rel="shortcut icon" type="image/vnd.microsoft.icon"
-	href="./favicon.ico" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="./common.css" type="text/css" />
+<link rel="stylesheet" media="(min-width: 1080px)" href="./desktop.css" type="text/css" />
+<link rel="stylesheet" media="(min-width: 601px) and (max-width: 1079px)" href="./tablet.css" type="text/css" />
+<link rel="stylesheet" media="(max-width: 600px)" href="./handheld.css" type="text/css" />
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicon.ico" />
+<script language="javascript" type="text/javascript" src="./handheld-menu.js"></script>
 </head>
 <body>
 
 	<div id="header">
+		<div id="menu">
+			<a href="javascript:toggle_menu()">
+				<img src="menu.png" alt="Menu" />
+			</a>
+		</div>
 		<div id="logo">
-			<a href="#"><img src="logo.png" alt="logo" /></a>
+			<a href="#">
+				<picture>
+					<source media="(min-width: 1080px)" srcset="logo.png" />
+					<source media="(min-width: 601px) and (max-width: 1079px)" srcset="logo-tablet.png" />
+					<source media="(max-width: 600px)" srcset="logo-handheld.png" />
+					<img src="logo.png" alt="logo" />
+				</picture>
+			</a>
 		</div>
 	</div>
 
@@ -44,26 +59,35 @@
 						Ettercap Source Code</a>
 				</h2>
 				<div class="entry">
-					The latest Ettercap release is: 0.8.2-Ferri<br /> Release
-					date: March 14, 2015<br />
-					<blockquote> Click to Download the version with bundled libraries
-						<span><p>
-								<a
-									href="https://github.com/Ettercap/ettercap/archive/v0.8.2.tar.gz"><img
-									src="Download _256.png" alt="" title="Click to Download the version with bundled libraries" /><br />ettercap-0.8.2.tar.gz</a><br />
-								Sha1: 7e528632ca01c5977da1a0af56a5e05fbc383832
+					The latest Ettercap release is: 0.8.3-Bertillon<br /> Release
+					date: July 1, 2019<br />
+					<blockquote><span class="padleft"> Click to Download the version with bundled libraries
+						<p>
+								<a href="https://github.com/Ettercap/ettercap/archive/v0.8.3.tar.gz">
+									<picture>
+										<source media="(min-width: 1080px)" srcset="Download_256.png" />
+										<source media="(min-width: 751px) and (max-width: 1079px)" srcset="Download_160.png" />
+										<source media="(max-width: 750px)" srcset="Download_128.png" />
+										<img src="Download_256.png" alt="" title="Click to Download the ettercap source only release" />
+									</picture>
+									<br />ettercap-0.8.3.tar.gz</a><br />
+									Sha1: 0000000000000000000000000000000000000000
 							</p></span>
 					</blockquote>
-					<blockquote> Click to Download the ettercap source only release
-						<span><p>
-								<a
-									href="https://github.com/Ettercap/ettercap/releases/download/v0.8.2/ettercap-0.8.2.tar.gz"><img
-									src="Download _256.png" alt="" title="Click to Download the ettercap source only release" /><br />ettercap-0.8.2.tar.gz</a><br />
-								Sha1: 04f50925a5f3b2555371075a048ab7bfe3892976
+					<blockquote><span class="padleft"> Click to Download the ettercap source only release
+						<p>
+								<a href="https://github.com/Ettercap/ettercap/releases/download/v0.8.3/ettercap-0.8.3.tar.gz">
+									<picture>
+										<source media="(min-width: 1080px)" srcset="Download_256.png" />
+										<source media="(min-width: 751px) and (max-width: 1079px)" srcset="Download_160.png" />
+										<source media="(max-width: 750px)" srcset="Download_128.png" />
+										<img src="Download_256.png" alt="" title="Click to Download the ettercap source only release" />
+									</picture>
+									<br />ettercap-0.8.3.tar.gz</a><br />
+									Sha1: 0000000000000000000000000000000000000000
 							</p></span>
 					</blockquote>
 					<br /> <br />
-					<h3>Previous Versions</h3>
 				</div>
 				<div class="post">
 					<h3>Previous Versions</h3>
@@ -76,6 +100,22 @@
 								<td style="color: #fff; padding: 10px; text-align: center;">Version</td>
 								<td style="color: #fff; padding: 10px; text-align: center;">Sha-1
 									Hash</td>
+							</tr>
+							<tr>
+								<td bgcolor="#eaeaea">Mar 14, 2015</td>
+								<td bgcolor="#eaeaea"><a
+									href="https://github.com/Ettercap/ettercap/archive/v0.8.2.tar.gz"
+									class="down">ettercap-0.8.2.tar.gz</a></td>
+								<td bgcolor="#e5e5e5">0.8.2-Ferri</td>
+								<td bgcolor="#eee">7e528632ca01c5977da1a0af56a5e05fbc383832</td>
+							</tr>
+							<tr>
+								<td bgcolor="#eaeaea">Mar 14, 2015</td>
+								<td bgcolor="#eaeaea"><a
+									href="https://github.com/Ettercap/ettercap/releases/download/v0.8.2/ettercap-0.8.2.tar.gz"
+									class="down">ettercap-0.8.2.tar.gz (source only)</a></td>
+								<td bgcolor="#e5e5e5">0.8.2-Ferri</td>
+								<td bgcolor="#eee">04f50925a5f3b2555371075a048ab7bfe3892976</td>
 							</tr>
 							<tr>
 								<td bgcolor="#eaeaea">Oct 16, 2014</td>
@@ -179,8 +219,52 @@
 					<br /> <br />
 					<h3>History</h3>
 					<div class="box">
-						<span class="title"><h3>0.8.2-Ferri</h3></span> <br /> <br />
+						<span class="title"><h3>0.8.3-Bertillon</h3></span> <br /> <br />
+						<span class="padded"><ul class="fancy_list">
+							<li class="circle_arrow">Bug Fix
+								<ul>
+									<li>!! Fix binary comparsion and assignment in etterfilter</li>
+									<li>!! Fixed packetbuffer racecond. in BRIDGE mode (e.g. Message too long)</li>
+									<li>!! Non-aligned filters are no longer supported (recompilation with etterfilter required)</li>
+									<li>!! Fixed sslstrip plugin startup issue due to regex compilation error</li>
+									<li>!! Fixed lots of build warnings</li>
+									<li>!! Proper separation of library and executable code</li>
+									<li>!! Fixed heap-buffer-overflow in write_output in etterfilter</li>
+									<li>!! ip_addr sanity check when etterlog processes info logfile</li>
+									<li>!! Lots of buffer under-/overflow conditions fixed</li>
+									<li>!! CVE-2017-6430 (Fix invalid read on crafted file in etterfilter)</li>
+									<li>!! fix dns_spoof plugin when used in bridge mode</li>
+								</ul>
+							</li>
+						</ul>
 						<ul class="fancy_list">
+							<li class="circle_arrow">New Features
+								<ul>
+									<li>+ SSL redirects are now customizable at runtime</li>
+									<li>+ GeoIP detection / support using CMake</li>
+									<li>+ Rework of GTK3 UI - modern GNOME3 look</li>
+									<li>+ New Kerberos 5 downgrade plugin</li>
+									<li>+ GTK3 is the new default GTK_BUILD_TYPE</li>
+									<li>+ OSPF dissector supports more authentication methods in hash-cracker friendly format</li>
+									<li>+ Rework of Oracle O5LOGON dissector</li>
+									<li>+ Multi-threaded name resolution</li>
+									<li>+ Updated etter.finger.mac</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="fancy_list">
+							<li class="circle_arrow">Removed
+								<ul>
+									<li>- GTK2 phase out initialized</li>
+									<li>- Usage of deprecated inet_aton replaced with current successor functions</li>
+								</ul>
+							</li>
+						</ul></span>
+                                                <br /> <br />
+					</div>
+					<div class="box">
+						<span class="title"><h3>0.8.2-Ferri</h3></span> <br /> <br />
+						<span class="padded"><ul class="fancy_list">
 							<li class="circle_arrow">Bug Fix
 								<ul>
 									<li>!! Fixed some openssl deprecated functions usage</li>
@@ -233,10 +317,12 @@
 									<li>- Remove gprof support</li>
 								</ul>
 							</li>
-						</ul>
+						</ul></span>
                                                 <br /> <br />
+					</div>
+					<div class="box">
 						<span class="title"><h3>0.8.1-Lombroso</h3></span> <br /> <br />
-						<ul class="fancy_list">
+						<span class="padded"><ul class="fancy_list">
 							<li class="circle_arrow">Bug Fix
 								<ul>
 									<li>!! Fixed incorrect checksum computation on 64-bit
@@ -365,12 +451,12 @@
 										usage</li>
 								</ul>
 							</li>
-						</ul>
+						</ul></span>
 						<br /> <br />
 					</div>
 					<div class="box">
 						<span class="title"><h3>0.8.0-Lacassagne</h3></span> <br /> <br />
-						<ul class="fancy_list">
+						<span class="padded"><ul class="fancy_list">
 							<li class="circle_arrow">Bug Fix
 								<ul>
 									<li>!! Fixed some problems in fork and execve usage in
@@ -467,12 +553,12 @@
 									<li>- Deprecated napster dissector</li>
 								</ul>
 							</li>
-						</ul>
+						</ul></span>
 						<br /> <br />
 					</div>
 					<div class="box">
 						<span class="title"><h3>0.7.6-Locard</h3></span> <br /> <br />
-						<ul class="fancy_list">
+						<span class="padded"><ul class="fancy_list">
 							<li class="circle_arrow">Bug Fix
 								<ul>
 									<li>!! Fixed some parsing errors</li>
@@ -525,12 +611,12 @@
 									<li>Removed 'u' and 'p' fields from etter.fields file</li>
 								</ul>
 							</li>
-						</ul>
+						</ul></span>
 						<br /> <br />
 					</div>
 					<div class="box">
 						<span class="title"><h3>0.7.5.3-Assimilation</h3></span> <br /> <br />
-						<ul class="fancy_list">
+						<span class="padded"><ul class="fancy_list">
 							<li class="circle_arrow">Bug Fix
 								<ul>
 									<li>!! Fixed ncurses host scan crash</li>
@@ -560,12 +646,12 @@
 										options for SSL Mitm</li>
 								</ul>
 							</li>
-						</ul>
+						</ul></span>
 						<br /> <br />
 					</div>
 					<div class="box">
 						<span class="title"><h3>0.7.5.1-Assimilation</h3></span> <br /> <br />
-						<ul class="fancy_list">
+						<span class="padded"><ul class="fancy_list">
 							<li class="circle_arrow">Bug Fix
 								<ul>
 									<li>!! fixed set_blocking() method preventing SSL MiTM
@@ -584,13 +670,13 @@
 									<li>+ Added MongoDB dissector</li>
 								</ul>
 							</li>
-						</ul>
+						</ul></span>
 						<br /> <br />
 					</div>
 
 					<div class="box">
 						<span class="title"><h3>0.7.5-Assimilation</h3></span> <br /> <br />
-						<ul class="fancy_list">
+						<span class="padded"><ul class="fancy_list">
 							<li class="circle_arrow">Bug Fix
 								<ul>
 									<li>!! fixed more memory leaks</li>
@@ -607,13 +693,13 @@
 									<li>+ Added SSLStrip Plugin (EXPERIMENTAL)</li>
 								</ul>
 							</li>
-						</ul>
+						</ul></span>
 						<br /> <br />
 					</div>
 
 					<div class="box">
 						<span class="title"><h3>0.7.4-Lazarus</h3></span> <br /> <br />
-						<ul class="fancy_list">
+						<span class="padded"><ul class="fancy_list">
 							<li class="circle_arrow">Bug Fix
 								<ul>
 									<li>!! fixed resource depletion issue</li>
@@ -627,14 +713,14 @@
 									<li>!! updated build system</li>
 								</ul>
 							</li>
-						</ul>
+						</ul></span>
 						<br /> <br />
 					</div>
 
 					<div class="box">
 						<span class="title"><h3>NG-0.7.3</h3></span> <br /> <br />
 
-						<ul class="fancy_list">
+						<span class="padded"><ul class="fancy_list">
 							<li class="circle_arrow">New Feature
 								<ul class="fancy_list">
 									<li>+ added the INC (+=) and DEC (-=) operators to the
@@ -651,13 +737,13 @@
 									<li>!! fixed a serious security bug</li>
 								</ul>
 							</li>
-						</ul>
+						</ul></span>
 						<br /> <br />
 					</div>
 
 					<div class="box">
 						<span class="title"><h3>NG-0.7.2</h3></span> <br /> <br />
-						<ul class="fancy_list">
+						<span class="padded"><ul class="fancy_list">
 							<li class="circle_arrow">New Feature
 								<ul class="fancy_list">
 									<li>+ the hosts scan can now be canceled by the user
@@ -689,7 +775,7 @@
 									<li>!! fixed the autoadd plugin when a target is ANY</li>
 								</ul>
 							</li>
-						</ul>
+						</ul></span>
 						<br /> <br />
 					</div>
 					<br class="clear" />
@@ -713,11 +799,9 @@
 	</div>
 	<!-- end container -->
 	<div class="fixed-side">
-		<img src="open-source.jpg" alt="open-source"
-			title="This project 100% Open-Source, for the community, and by the community."
-			style="position: relative; right: 6px;" /> <br /> <br /> <a
-			href="https://twitter.com/ettercapproject"><img
-			src="Twitter-64.png" alt="" title="Follow us on Twitter" /></a>
+		<img src="open-source.jpg"  alt="open-source" title="This project 100% Open-Source, for the community, and by the community." style="position:relative; right:6px;" />
+		<a href="https://twitter.com/ettercapproject"><img src="Twitter-64.png" alt="Twitter" title="Follow us on Twitter" /></a>
+		<a href="https://www.youtube.com/channel/UCVYP1AeH9G1E1rtllwxLEQA"><img src="youtube-black.png" alt="YouTube" title="Official Ettercap YouTube Channel" /></a>
 	</div>
 </body>
 </html>

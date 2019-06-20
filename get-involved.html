@@ -4,15 +4,31 @@
 <title>Get Involved &laquo; Ettercap</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=100" /> <!-- Force IE8 Compatibility mode OFF -->
-<link rel="stylesheet" href="./style.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="./common.css" type="text/css" />
+<link rel="stylesheet" media="(min-width: 1080px)" href="./desktop.css" type="text/css" />
+<link rel="stylesheet" media="(min-width: 601px) and (max-width: 1079px)" href="./tablet.css" type="text/css" />
+<link rel="stylesheet" media="(max-width: 600px)" href="./handheld.css" type="text/css" />
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicon.ico" />
-
+<script language="javascript" type="text/javascript" src="./handheld-menu.js"></script>
 </head>
 <body>
 
 <div id="header">
+	<div id="menu">
+		<a href="javascript:toggle_menu()">
+			<img src="menu.png" alt="Menu" />
+		</a>
+	</div>
 	<div id="logo">
-		<a href="#"><img src="logo.png" alt="logo" /></a>
+		<a href="#">
+			<picture>
+				<source media="(min-width: 1080px)" srcset="logo.png" />
+				<source media="(min-width: 601px) and (max-width: 1079px)" srcset="logo-tablet.png" />
+				<source media="(max-width: 600px)" srcset="logo-handheld.png" />
+				<img src="logo.png" alt="logo" />
+			</picture>
+		</a>
 	</div>
 </div>
 
@@ -39,38 +55,46 @@
 <h2>Get involved with the Ettercap project</h2>
 	<div class="entry">
 
-	<blockquote><span><p>We are open to everyone who wants to be a part of this project and continue to make it the best MiTM tool available.</p></span></blockquote>
+	<blockquote><span class="padded"><p>We are open to everyone who wants to be a part of this project and continue to make it the best MiTM tool available.</p></span></blockquote>
 
 
 
 		<h3>Development Efforts</h3>
-		<p>The Ettercap source code is stored on the <a href="https://github.com/Ettercap/ettercap.git">Github</a> pages using a GIT repository. Below are the steps to you should follow to ensure you are working off the same code base as everyone else involved in the project.</p>
+		<p>The Ettercap source code is stored on the <a href="https://github.com/Ettercap/ettercap">Github</a> pages using a GIT repository. Below are the steps to you should follow to ensure you are working off the same code base as everyone else involved in the project.</p>
 
-<pre><code>root@your_machine: git clone git://github.com/Ettercap/ettercap.git
-root@your_machine: cd ettercap
+<pre><code>$ git clone git://github.com/Ettercap/ettercap
+$ cd ettercap
 </code></pre>
-		<p>Once you moved to the rc branch you can begin to review the current source code in development.<br /><small>Please note that very few individuals have the ability to commit code directly within the GIT repository.</small>	</p>
+		<p>Once you moved to the rc branch you can begin to review the current source code in development.<br />
+		Have a look at our <a href="https://github.com/Ettercap/ettercap/wiki/git-config">Github Wiki</a> page 
+		that provide lot of recommendations how to work with Git(hub) that help contributing to the project.<br />
+		<small>Please note that very few individuals have the ability to commit code directly within the GIT repository.</small>	</p>
 
 <div class="box ">
 <span class="title"><h3>How to submit code you've worked on</h3></span>
-<p>1 - Once you've worked all the known bugs out of your code, you can create a
-patch file and send it to the ettercap.project gmail account</p>
+<span class="padded">
+<p>1 - Once you've worked all the known bugs out of your code, commit it to your
+fork of Ettercap code on Github.</p>
 
-<p>2 - One of the core developers will review the code, make any necessary changes
-and merge the code into the proper branch.</p>
+<p>2 - Create a pull-request with a brief abstract of the issue you're fixing</p>
 
-<p>3 - You will receive full credit as a contributor to the project within the
-source documentation.</p>
+<p>3 - After quality checks and discussions with the core developers your changes may get
+merged to Ettercap's master branch</p>
 
-Otherwise you can fork the project on github and ask for a pull request after you pushed in your personal fork the patch
+When you've been contributing to the Ettercap project in a notably fashion, you'll receive
+full credit as a contributor to the project within the source documentation.
+
+</span>
 </div>
 
 
 <h3>Testing Efforts</h3>
 
-<p>Testing can occur at anytime and should be completed against the ettercap_rc branch. However, an e-mail will be sent out on the 1st of every month to everyone who requested to be part of the testing team that will include any changes made compared to the last release.</p>
+<p>When you submit your pull-request, we expect testing has already been done throughoutly. Of course during review we may also do additional testing.</p>
 
-<p>When compiling ettercap be sure you purge all other instances and prepare for a clean installation. Do not compile with any flags other than debug in order to ensure a consistent test across the entire testing base.</p>
+<p>Travis-CI will automatically try to build your code with various build-flag combinations and against different compilers and on different operating systems. Of course, your patch will only be accepted when this systematical build-based testing has been passed successfully.</p>
+
+<p>If a specific packet pattern is related to the patch, please provide an example packet capture file so that we all are able to do the same level of testing to raise confidenty and quality.</p>
 
 <p>During testing, you can test however you want, but there are a few high level principles that will need to be followed:</p>
 
@@ -86,14 +110,7 @@ Otherwise you can fork the project on github and ask for a pull request after yo
 
 <h3>Development &amp; Testing Schedule</h3>
 
-<p>All code needs to be submitted by the 20th of every month. If your code is not received by the 20th, then it will be put off until the following month.</p>
-
-<p>All code received by the 20th of the month will be reviewed and included where applicable.</p>
-
-<p>A call to all testers will go out via the beta testing lists and other social media sites on the first of every month.</p>
-
-<p>Official testing will close on the 10th of every month with the goal to complete a monthly release around the 15th of each month.</p>
-
+<p>There is no fix schedule when to submit pull-requests. It's treated on demand.</p>
 
 
 		<br class="clear" />
@@ -112,8 +129,8 @@ Otherwise you can fork the project on github and ask for a pull request after yo
 </div><!-- end container -->
 <div class="fixed-side">
 <img src="open-source.jpg"  alt="open-source" title="This project 100% Open-Source, for the community, and by the community." style="position:relative; right:6px;" />
-<br /><br />
 <a href="https://twitter.com/ettercapproject"><img src="Twitter-64.png" alt="" title="Follow us on Twitter" /></a>
+<a href="https://www.youtube.com/channel/UCVYP1AeH9G1E1rtllwxLEQA"><img src="youtube-black.png" alt="YouTube" title="Official Ettercap YouTube Channel" /></a>
 </div>
 </body>
 </html>
