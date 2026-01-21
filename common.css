@@ -193,3 +193,8 @@ background:url(sprite.png) no-repeat -500px -124px;
 .sitemap_list .children {
     padding-left:0;
 }
+
+td.checksum {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
