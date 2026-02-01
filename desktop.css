@@ -130,8 +130,14 @@ h1 {
 }
 
 .entry p {
-    max-width:920px;
+    max-width:900px;
     margin:22px auto 22px auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+span.padleft {
+   padding-left: 50px;
 }
 
 .entry ul, .entry ol {
