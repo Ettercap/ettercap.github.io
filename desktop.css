@@ -9,7 +9,7 @@ blockquote {
     padding:10px 50px 10px 10px;
     width:940px;
     margin:25px -40px 25px -20px;
-    font-size:30px;
+    font-size:20px;
 }
 
 
@@ -69,7 +69,7 @@ h1 {
 }
 
 #digi-nav ul{
-    width:1000px;
+    width:1300px;
     display:block;
     margin:0px auto;
     padding:0px;
@@ -104,7 +104,7 @@ h1 {
 }
 
 .container {
-    width:1000px;
+    width:1300px;
     display:block;
     border:solid #1e1e1e 2px;
     outline:solid #2e2e2e 1px;
